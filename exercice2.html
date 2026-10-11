@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice 2 - Formulaire d'authentification</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 400px; margin: 40px auto; }
+    label { display: block; margin-top: 12px; font-weight: 600; }
+    input { width: 100%; padding: 8px; margin-top: 4px; box-sizing: border-box; }
+    input:invalid { border-color: #cc0000; }
+    input:valid { border-color: #2e7d32; }
+    button { margin-top: 20px; padding: 10px 16px; }
+  </style>
+</head>
+<body>
+  <h1>Formulaire d'authentification</h1>
+
+  <form>
+    <label for="email">Email</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      required 
+      pattern=".*@epi\.com\.tn$" 
+      title="L'adresse email doit obligatoirement se terminer par epi.com.tn">
+
+    <label for="password">Password</label>
+    <input 
+      type="password" 
+      id="password" 
+      name="password" 
+      required 
+      minlength="6" 
+      maxlength="8" 
+      pattern="(?=.*\d).+" 
+      title="Le mot de passe doit contenir entre 6 et 8 caractères et inclure au moins un chiffre.">
+
+    <button type="submit">Envoyer</button>
+  </form>
+</body>
+</html>
